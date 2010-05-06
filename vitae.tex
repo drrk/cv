@@ -1,0 +1,150 @@
+\documentclass[10pt]{article}
+\usepackage{charter}
+\usepackage{fullpage}
+\usepackage[resetlabels]{multibib}
+\usepackage[ManyBibs]{currvita}
+
+% Initialize each paper type for which you need a bibliography.
+% Just a dummy parameter is necessary.
+
+% Better for lists with 1-2 items and short descriptions
+\newenvironment{sublist}{%
+	\begin{list}{}{%
+		\setlength{\itemsep}{0em}\setlength{\parsep}{0em}%
+		\setlength{\topsep}{0em}\setlength{\parskip}{0em}%
+	}%
+}%
+{ \end{list} }
+
+% Better for lists with more than 2 items and/or long descriptions
+\newenvironment{subbulletlist}{%
+	\begin{list}{\labelitemii}{%
+		\setlength{\topsep}{\itemsep}\setlength{\parskip}{\parsep}%
+	}%
+}%
+{ \end{list} }
+
+\begin{document}
+
+% We'll use this length to change the defaults in some of our lists.
+\newlength{\oldcvlabelwidth}
+\renewcommand*{\cvbibname}{}
+
+% This is what will appear at the very top of your CV.
+\begin{cv}{Kimball Johnson\\{\large \itshape Curriculum Vitae}}
+
+% Items have more vertical space between them than line breaks.
+% Note: if you want a linebreak after each cvlist title, you can do:
+% \begin{cvlist}{Title \hspace{3in}}
+\begin{cvlist}{Contact}
+	\item
+	19 Rosebery Avenue\\
+	Lancaster\\
+	Lancashire\\
+	LA1 4DJ
+	\item Phone: 01524 888995\\
+	Mobile: 07970252372
+	\item kimball@bowerham.net
+	% The tilde doesn't show up well in LaTeX, the \sim symbol looks
+	% much better.  Though, you can't copy and paste it from your PDF
+	% like you can with a tilde.
+	\item http://kimball.org.uk/
+\end{cvlist}
+
+\begin{cvlist}{Education}
+	\item \emph{BSc II(ii)(honours) Computer Science}, July 2005\\
+	Lancaster University
+\end{cvlist}
+
+% After you have finished your CV, you may need to manually insert
+% some pagebreaks to make it look nice.
+\pagebreak
+
+% cvlist items can take dates as a parameter.
+\begin{cvlist}{Employment}
+	\item[07/2007-date] Systems Developer\\
+	Lancaster University Network Systems Ltd (LUNS)\\
+	Lancaster, Lancashire
+\end{cvlist}
+
+% These commands will make our papers be indented after the first line
+% to make the author's name stand out more.  Also, we reduce the
+% indentation of the paper type titles (e.g., Journal Papers,
+% Conference Paper) compared to regular cvlist items.
+\setlength{\oldcvlabelwidth}{\cvlabelwidth}
+\setlength{\cvlabelwidth}{1em}
+\renewcommand*{\bibindent}{1.5em}
+% Do bibaddtoleftmargin instead of biblabelsep if you're
+% not using manybib or open bib
+%\renewcommand*{\bibaddtoleftmargin}{1.5em}
+\renewcommand*{\biblabelsep}{1.5em}
+
+% To update, before doing latexmk, run:
+% bibtex journal
+% bibtex refpaper
+% bibtex unrefpaper
+% bibtex techreport
+
+% Reset the label indentation
+\setlength{\cvlabelwidth}{\oldcvlabelwidth}
+
+\setlength{\oldcvlabelwidth}{\cvlabelwidth}
+\setlength{\cvlabelwidth}{1em}
+\begin{cvlist}{Experience}
+	\item \textbf{LUNS}
+	\begin{sublist}
+		\item 
+        During my summer placement with LUNS, I was employed to support
+        the Cumbria and Lancaster Education Online (CLEO) network systems. This
+        entailed writing support systems for their video conference web based billing
+        system using PHP and Perl. I was also involved in the start of the Local Loop
+        Unbundeling Project and this involved meeting with British Telecom, and
+        understanding their proporitiy XML based messaging protocol.
+        \item
+        When I returned to LUNS as full time developer after my time at
+        Bloomberg I 
+	\end{sublist}
+
+	\item \textbf{Bloomberg}
+	% This sublist looks better with bullets.
+	\begin{subbulletlist}
+    \item Stuff
+	\end{subbulletlist}
+\pagebreak
+{}
+	\item \textbf{Undergraduate Work}
+	\begin{subbulletlist}
+    \item Project
+	\end{subbulletlist}
+\end{cvlist}
+\setlength{\cvlabelwidth}{\oldcvlabelwidth}
+
+\begin{cvlist}{Memberships}
+	\item[2006--present] Member, British Computer Society (BCS)
+\end{cvlist}
+
+\setlength{\oldcvlabelwidth}{\cvlabelwidth}
+\setlength{\cvlabelwidth}{1em}
+\begin{cvlist}{Technical Skills}
+	\item \textbf{Proficient}
+	\begin{sublist}
+		\item C++, C, Java, Perl, LaTeX, PHP
+	\end{sublist}
+	\item \textbf{Familiar} 
+	\begin{sublist}
+		\item Objective C, Fortran
+	\end{sublist}
+\end{cvlist}
+\setlength{\cvlabelwidth}{\oldcvlabelwidth}
+
+\begin{cvlist}{Extracurricular}
+\item BFM
+\end{cvlist}
+
+\setlength{\oldcvlabelwidth}{\cvlabelwidth}
+\setlength{\cvlabelwidth}{1em}
+\setlength{\cvlabelwidth}{\oldcvlabelwidth}
+
+\end{cv}
+\end{document}
+
