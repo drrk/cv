@@ -2,8 +2,7 @@
 \usepackage{charter}
 \usepackage{fullpage}
 \usepackage[resetlabels]{multibib}
-\usepackage[ManyBibs]{currvita}
-
+\usepackage[ManyBibs,NoDate]{currvita}
 % Initialize each paper type for which you need a bibliography.
 % Just a dummy parameter is necessary.
 
@@ -38,113 +37,247 @@
 % \begin{cvlist}{Title \hspace{3in}}
 \begin{cvlist}{Contact}
 	\item
-	19 Rosebery Avenue\\
+	11 Lindow Square\\
 	Lancaster\\
 	Lancashire\\
-	LA1 4DJ
+	LA1 1SE
 	\item Phone: 01524 888995\\
 	Mobile: 07970252372
 	\item kimball@bowerham.net
-	% The tilde doesn't show up well in LaTeX, the \sim symbol looks
-	% much better.  Though, you can't copy and paste it from your PDF
-	% like you can with a tilde.
-	\item http://kimball.org.uk/
 \end{cvlist}
 
 \begin{cvlist}{Education}
-	\item \emph{BSc II(ii)(honours) Computer Science}, July 2005\\
+	\item \emph{BSc II(ii)(honours) Computer Science}, 2002- 2005\\
 	Lancaster University
+    \item \emph{Electronic and Computer Engineering First Year} 2000-2001\\
+    University of York (Withdrawn)
 \end{cvlist}
-
-% After you have finished your CV, you may need to manually insert
-% some pagebreaks to make it look nice.
-\pagebreak
 
 % cvlist items can take dates as a parameter.
 \begin{cvlist}{Employment}
-	\item[07/2007-date] Systems Developer\\
+    \item[02/2011 - date] Systems Developer\\
+    Lancashire County Council\\
+    Lancaster, Lancashire
+	\item[07/2007 - 02/2011] Systems Developer\\
 	Lancaster University Network Systems Ltd (LUNS)\\
 	Lancaster, Lancashire
+    \item[09/2005 - 07/2007] Software Developer \\
+    Auto Execution, Research and Development, Bloomberg LP,
+    London
+    \item[07/2005 - 09/2005] Systems Developer \\ 
+	Lancaster University Network Systems Ltd (LUNS)\\
+	Lancaster, Lancashire
+    \item[09/2005 - 07/2007] Software Developer Internship\\
+    Trading Systems, Research and Development, Bloomberg LP,
+    London
+    \item[05/2004 - 06/2004, 09/2004-06/2005] Support Assistant\\
+    Lancaster University
+    \item[04/2002 - 09/2002] Audio Visual Technician\\
+    University of York
 \end{cvlist}
-
-% These commands will make our papers be indented after the first line
-% to make the author's name stand out more.  Also, we reduce the
-% indentation of the paper type titles (e.g., Journal Papers,
-% Conference Paper) compared to regular cvlist items.
-\setlength{\oldcvlabelwidth}{\cvlabelwidth}
-\setlength{\cvlabelwidth}{1em}
-\renewcommand*{\bibindent}{1.5em}
-% Do bibaddtoleftmargin instead of biblabelsep if you're
-% not using manybib or open bib
-%\renewcommand*{\bibaddtoleftmargin}{1.5em}
-%\renewcommand*{\biblabelsep}{1.5em}
-
-% To update, before doing latexmk, run:
-% bibtex journal
-% bibtex refpaper
-% bibtex unrefpaper
-% bibtex techreport
-
-% Reset the label indentation
-\setlength{\cvlabelwidth}{\oldcvlabelwidth}
-
-\setlength{\oldcvlabelwidth}{\cvlabelwidth}
-\setlength{\cvlabelwidth}{1em}
-\begin{cvlist}{Experience}
-	\item \textbf{LUNS}
-	\begin{sublist}
-		\item 
-        During my summer placement with LUNS, I was employed to support
-        the Cumbria and Lancaster Education Online (CLEO) network systems. This
-        entailed writing support systems for their video conference web based billing
-        system using PHP and Perl. I was also involved in the start of the Local Loop
-        Unbundeling Project and this involved meeting with British Telecom, and
-        understanding their proporitiy XML based messaging protocol.
-        \item
-        When I returned to LUNS as full time developer after my time at
-        Bloomberg I 
-	\end{sublist}
-
-	\item \textbf{Bloomberg}
-	% This sublist looks better with bullets.
-	\begin{subbulletlist}
-    \item Stuff
-	\end{subbulletlist}
-\pagebreak
-{}
-	\item \textbf{Undergraduate Work}
-	\begin{subbulletlist}
-    \item Project
-	\end{subbulletlist}
-\end{cvlist}
-\setlength{\cvlabelwidth}{\oldcvlabelwidth}
-
-\begin{cvlist}{Memberships}
-	\item[2006--present] Member, British Computer Society (BCS)
-\end{cvlist}
-
 \setlength{\oldcvlabelwidth}{\cvlabelwidth}
 \setlength{\cvlabelwidth}{1em}
 \begin{cvlist}{Technical Skills}
-	\item \textbf{Proficient}
-	\begin{sublist}
-		\item C++, C, Java, Perl, LaTeX, PHP
-	\end{sublist}
-	\item \textbf{Familiar} 
-	\begin{sublist}
-		\item Objective C, Fortran
-	\end{sublist}
+		\item C++, C, Java (J2SE), Perl, Ruby, Rails, Objective C, Fortran, PHP
+		\item Postgresql, MySQL, Interbase
+		\item UML, Agile, Test Driven Development, SCRUM, JUnit
+		\item TCP/IP, Linux, Windows
+		\item ITIL v3 Foundation Certified, PRINCE2 Foundation Certified
 \end{cvlist}
 \setlength{\cvlabelwidth}{\oldcvlabelwidth}
-
-\begin{cvlist}{Extracurricular}
-\item BFM
-\end{cvlist}
+\pagebreak
 
 \setlength{\oldcvlabelwidth}{\cvlabelwidth}
 \setlength{\cvlabelwidth}{1em}
-\setlength{\cvlabelwidth}{\oldcvlabelwidth}
+\renewcommand*{\bibindent}{1.5em}
 
+\begin{cvlist}{Experience}
+    \item \textbf{Lancashire County Council}
+
+    On the 14th of February 2011 the contract between CLEO and LUNS (below)
+    ended, and LCC brought the work in-house.  As a result I was transferred into
+    the council through TUPE and have been continuing with the same duties, with 
+	a greater responsibility of support due to a smaller team.  Additionally a number 
+	of the core infrastructure was not part of the contract so I have had to rebuild it.
+	This includes service monitoring, centralised configuration systems and 
+	package management and deployment systems.  With the benefit of a green field
+	environment, I have designed a new system based on the Chef Configuration management
+	system, modified to allow for simple disaster recovery, maintaining copies of all
+	configuration in the central server, and thus on backup tapes. LCC, as with LUNS,
+	follow the ITIL v3 Service Methodology.   
+	
+	Key Skills: ITIL, PRINCE, Perl, PHP, Ruby, Chef, JavaScript, JQuery, 
+	SQL, ADODB, SQLite, Apache HTTP, H323, Linux, Windows, Active Directory, LDAP, 
+	Kerberos, GIT, Subversion, Shell Scripting
+	\item \textbf{LUNS}
+
+    LUNS's primary business was a contract with the Cumbria and Lancashire
+    Education Online (CLEO) Regional Broadband Consortium.  This contract was
+    to provide all of the network systems, and a large proportion of the
+    central computer systems for the schools in the two counties.
+    Additionally they had a separate one contract with Cumbria County Council to
+    provide further central software services for Cumbrian schools. All projects 
+	were managed using PRINCE2 and service was managed under the ITIL v3 Best Practices.
+	\begin{subbulletlist}
+    \item Network Edge Device
+
+        One of my main projects at LUNS is the ongoing development of the
+        Network Edge Device that is installed into every school in the two
+        counties.  This device, based on Debian GNU/Linux, is for local 
+        web caching, filtering and content provision.  It is designed to 
+        be centrally managed, and such that it can recover from almost any
+        corruption or configuration problems simply with a reboot. I have 
+        been involved with all aspects of this project, particularly with the 
+        database system, and stored procedures. Another major aspect of this 
+        project has been integration of the web proxy authentication with
+        Microsoft Active Directory, initially through NTLM, and most recently
+        Kerberos. 
+    \item Dashboard Management system
+
+		As part of the NED project described above, there was need for a central 
+		web based management system.  To this end we designed a modular PHP5 class 
+		based framework, and a hierarchal data structure. I was greatly involved 
+		in this system, and wholly responsible for the database development. This was 
+		developed in PostgreSQL with PL/Perl stored procedures.
+    \item Cumbrian Shared Hosting 
+
+        Another major project has been the re-development of the Cumbrian
+        schools shared hosting solution.  I was the project lead for this,
+        organising the work for myself and my colleagues to produce a new 
+        secure hosting solution for the schools.  I designed a 
+        solution that takes advantage of separation of concerns with Linux 
+        Virtual Servers, and by employing various security features to help
+        prevent spread of any attacks or exploits from one site to another.
+    \item Video Conferencing 
+
+        CLEO provide a video conferencing service to schools and museums in
+        both counties, based on the GnuGK gatekeeper software.  I have
+        been the lead on this service since I started at LUNS full time, and
+        have been responsible for a migration of the management and
+        authentication system from the old, hard to manage system, to integrate
+        with the dashboard configuration system, used by the NED project.
+	\end{subbulletlist}
+	
+	Key Skills: ITIL, PRINCE, Perl, PHP, JavaScript, JQuery,  SQL, ADODB, SQLite,
+	Apache HTTP, H323, Linux, Windows, Active Directory, LDAP, Kerberos, GIT, 
+	Subversion, Shell Scripting
+	\item \textbf{Bloomberg}
+
+	\begin{subbulletlist}
+    \item E-Bond Trading Platform
+
+    After the 10 week training class for the full time position, I became part of 
+    the Auto Execution applications development team, initially working on the 
+    E-Bond electronic trading platform. I quickly took over as the main support 
+    contact for the back end server programs running the application, and 
+    additionally developed many new features as the project phases continued.
+    This was developed in C and C++, and GTK for the User Interface.  This low latency 
+	real-time system was in use at the time as the canonical trading platform for 
+	many emerging bond markets.
+    
+    \item T-Zero Integration
+
+    The next major project I worked on was integration with the T-Zero
+    Credit Default Swap trade reporting system. For this greenfield project 
+	I designed the back-end multi-threaded server application from scratch to integrate 
+	with their Java Enterprise application server.  As this systems was developed
+	in Java it provided a great challenge integrating new technologies with the dated 
+    existing Bloomberg Systems.  
+	\end{subbulletlist}
+
+	Key Skills: Java, C, C++, GTK, Fortran, SQL, UML, JUnit, Shell Scripting, UML 
+	\item \textbf{LUNS (Summer Placement)}
+
+    During my summer placement with LUNS, I was employed to support
+    the CLEO network systems. This entailed writing support systems for 
+    their video conferencing web based billing system using PHP and Perl. 
+    I was also involved in the start of the Local Loop Unbundling Project; 
+    this involved meeting with British Telecom, and
+    understanding their proprietary XML based messaging protocol.
+
+	Key Skills: PHP, Perl, XML
+    \item \textbf{Bloomberg Internship}
+
+    During the summer vacation 2004, I was selected for an internship with the 
+    Research and Development department at Bloomberg LP in London. During this 
+    period I was part of the Trading Systems team, and completed several projects
+    to improve the quality of the Bloomberg Professional system.
+
+	Key Skills: C, C++, Fortran, XML, XSLT, PHP, HDODB
+    \item \textbf{Lancaster University}
+
+    Whilst a student at Lancaster University I worked as a Support Technician for
+    the student residential network. This involved configuration of students' 
+    computers for use on the network, and removal of viruses and other system
+    problems, that caused system and network problems for all the users on the network.  
+    This was primarily a technical support role working with Windows Operation 
+    systems, but I also provided support for Linux and MacOSX systems.
+
+	Key Skills: Windows(9x, XP), Linux, MacOSX
+    \item \textbf{University of York}
+
+    For the University of York I worked in the Audio Visual Department as a 
+    technician. This involved setting up computer projectors and PA Equipment for 
+    Lectures during term time, and providing technical assistance for delegates 
+    during the conferences in the holiday period. I also started to write a 
+    web-based diary system, using ColdFusion and Interbase on a Solaris
+    system, sadly I started at Lancaster before this was able to be completed
+
+ 	Key Skills: Cold Fusion, Interbase, PHP
+
+%    \item \textbf{Norwich Union Insurance PLC}
+%    Here I was employed to update the project tracking and management system for 
+%    the marketing department. The company had recently merged with CGU Plc and as 
+%    such there was a large amount of inconsistency between the two systems. I was 
+%    briefed to resolve the errors and to consult with the staff using the system 
+%    for their feedback, in order to implement new features.
+
+%    \item \textbf{Vox Technology Ltd}
+%    Vox Technology Ltd is a small computer company based in Partridge Green, West 
+%    Sussex. They build bespoke computer systems, and have a large customer base in 
+%    Sussex and Surrey.
+%    I was employed as a member of the technical support team, visiting customer 
+%    sites to solve more complex problems. I installed network systems, and 
+%    assembled and installed all types of computers, from home machines, to large 
+%    business servers. I wrote software for internal use, using Microsoft Access 
+%    and Visual Basic, and also updated customers database systems for Y2K 
+%    compliance.
+
+\end{cvlist}
+
+\pagebreak
+\begin{cvlist}{Extracurricular}
+\item Student Radio
+
+Whilst I was studying at York University I became an active member of the 
+University Radio, where I held the post of Assistant Computing Officer. 
+I assisted the computing officer in the running of the computer equipment
+in the radio station, including the database systems, and the security of the 
+main server. I was previously the web-master, responsible for the maintenance of
+the website. I also was heavily involved with the organisation and preparation 
+of several outside broadcasts, including the Student Union Elections. I 
+presented a number of shows for the radio, including co-hosting the Breakfast 
+Show.  I was also involved with the Campus radio station at Lancaster, where I 
+was the Systems Administrator, and maintained a network of a Linux 
+server, Linux workstation, and 6 Windows workstations.
+\item RAG
+
+I was on the York RAG Committee, as the Media Promotions Officer. This
+involved filming the various RAG fund raising events. I also made a 
+promotional video, designed to encourage students to get involved in RAG and 
+hitchhiked to Paris two years running in aid of Children in Need.
+\item Misc
+
+I enjoy water sports, including dinghy sailing, kayaking, windsurfing and 
+Canadian canoeing. I am a PADI Advanced Open Water diver and have dived in 
+various locations around the world.
+I relax by reading, particularly Science Fiction and Fantasy and 
+Action Thrillers, and experimenting with programming, and video/sound editing 
+on my computer.
+On a more cultural side, I am a keen singer, and have been involved in both
+the University Choir, and Lancaster Male Voice Choir.  I also enjoy going to
+concerts both classical and contemporary, and Musical Theatre.
+\end{cvlist}
 \end{cv}
 \end{document}
 
